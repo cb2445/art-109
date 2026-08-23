@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <h1>HTML FOR US BY US</h1>
+        <h1 draggable="true">Keyboard Breakdown</h1>
         <nav>
             <ul>
                 <li><a href="#casing">Casing</a></li>
@@ -19,8 +19,50 @@
                 <li><a href="#pcb">PCB</a></li>
             </ul>
         </nav>
+        <div>
+            <img src="images/ganadions.png" alt="White dog meme">
+            <img src="images/gonyanions.png" alt="White dog meme">
+            <!-- if img was outisde tutorials folder...
+             "../images" : go out one folder then searches
+             OR
+             "/images" : goes to root folder then searches
+            -->
+        </div>
     </header>
     <main>
+        <section>
+            <h2> Pick your Mood.</h2>
+            <p>What color are you feeling today?</p>
+
+            <div>
+                <input type="color" id="head" name="head" value="#abcfeb" />
+                <label for="head">Positive Side (the reserved)</label>
+            </div>
+
+            <div>
+                <input type="color" id="body" name="body" value="#232536" />
+                <label for="body">Negative Side (the intrusive)</label>
+            </div>
+
+        </section>
+        <br><br>
+        <section>
+            <fieldset>
+                <legend>Choose your style:</legend>
+
+                <div>
+                    <input type="checkbox" id="minimal" name="minimal" />
+                    <label for="minimal">- Minimal</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="maximal" name="maximal" />
+                    <label for="maximal">+ Maximal</label>
+                </div>
+            </fieldset>
+
+        </section>
+        <br><br>
         <section id="casing">
             <h2>Aluminum</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint reprehenderit nesciunt error corrupti!
@@ -58,10 +100,15 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint reprehenderit nesciunt error corrupti!
                 Sequi architecto quas aperiam consequatur nemo! Iusto voluptatibus nulla doloribus fugit ipsum cum est,
                 praesentium mollitia itaque!</p>
-
+            <p>~~~~</p>
+            <pre>at the end of the day, we ball.</pre>
         </section>
     </main>
-    <footer>~~~~</footer>
+    <footer>
+        ~~~~
+        <label for="productivity"> Task Completion for Week 08/17</label>
+        <progress id="productivity" value="45" max="100">
+    </footer>
 </body>
 
 </html>
@@ -95,6 +142,16 @@
 
 - "#" for ids, "." for classes
 
+- Tag is the brackets, element is the item itself
+- Attributes are text in light blue, 
+    - e.x. charset= and href=
+        - class and id are examples of global attributes
+        - hyperlinks are an example of non-global attributes 
+
+- Classes are used to apply CSS to multiple sections/elements in a code
+- ID's are meant to apply to only one section/element to identify it sepcifically 
+
+- Block elements take up the whole screen width, wheeas inline takes up a smaller section within the block
 
 -Shortcuts
     - shift+opt+f : Auto align
