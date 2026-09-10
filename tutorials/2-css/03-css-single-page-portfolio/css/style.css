@@ -39,7 +39,8 @@ header h1 {
 
 nav {
     position: absolute;
-    top: 6rem;
+    top: 10rem;
+    left: 41rem;
     background-color: white;
 }
 
