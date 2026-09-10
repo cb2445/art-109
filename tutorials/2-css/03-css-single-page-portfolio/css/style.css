@@ -1,0 +1,87 @@
+/* CSS resets */
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Accessibility Resets */
+html {
+    font-size: 100%;
+
+}
+
+/* General CSS */
+body {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+header {
+    padding: 6rem;
+    margin-bottom: 3rem;
+    /* background-color: #edeff3; */
+    background: linear-gradient(90deg, rgb(175, 213, 186) 0%, rgba(255, 255, 255, 1) 100%);
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #0d2368;
+    border-bottom: #c7cadc .5rem solid;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+main {
+
+}
+
+.about-section, .portfolio-section, .contact-section {
+    margin-bottom: 5rem;
+}
+
+.about-content, .portfolio-content, .contact-content {
+
+    max-width: 40rem;
+    margin: 2rem auto;
+}
+
+.portfolio-item {
+    margin-bottom: 5rem;
+    background-color: #ffffff;
+    padding: 4rem;
+    text-align: justify;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.portfolio-item h3 {
+    margin: 1rem 0rem;
+}
+
+.portfolio-item p {
+    font-size: 1.1rem;
+}
+
+.about-section {
+    padding: .5rem;
+    background-color:#c7cadc;
+}
+
+.portfolio-section {
+    padding: .5rem;
+    background-color: rgb(213, 213, 213);
+}
+
+.portfolio-section h2 {
+    padding: 2rem 0rem;
+}
