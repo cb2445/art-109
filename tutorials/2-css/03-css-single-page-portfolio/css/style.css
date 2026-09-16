@@ -1,10 +1,10 @@
 /* ````````````````````````Color Palette```````````````````````` */
 :root {
-    --bg-color-1: #DDF3E9;
-    --bg-color-2: #B0E4C4;
+    --bg-color-1: #D2E6E0;
+    --bg-color-2: #EDF3F0;
     --font: #3B2A12;
     --accent-1: #F3F1EB;
-    --accent-2: #C2F2D4;
+    --accent-2: #429075;
     --dark: #150F06;
 }
 
@@ -28,7 +28,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     line-height: 1.5rem;
-    color: var(--accent-1);
+    color: var(--font);
 }
 
 header {
@@ -40,33 +40,35 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--font);
-    border-bottom: var(--font) .5rem solid;
+    border-bottom: var(--accent-2) .5rem solid;
     text-align: center;
 }
 
 header h1 {
     font-size: 3rem;
-    /* text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-color: #C2F2D4; */
+    text-decoration: underline;
+    text-decoration-style:double;
+    text-decoration-thickness: .2rem;
+    text-decoration-color: var(--dark);
 }
 
 nav {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: var(--accent-1);
+    background-color: #3B2A12;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--font);
+    color: var(--accent-1);
     display: inline-block;
     margin: 0rem 2rem;
 }
 
 nav a:hover {
-    background-color: #92b8f5;
+    background-color: var(--accent-1);
+    color: var(--font);
 }
 
 .about-section, .portfolio-section, .contact-section {
@@ -87,13 +89,17 @@ nav a:hover {
     color: var(--font);
 }
 
+.contact-content {
+    color:var(--bg-color-2);
+}
+
 .portfolio-item {
     margin-bottom: 5rem;
-    background-color: var(--font);
+    background-color: var(--bg-color-1);
     padding: 3rem;
     text-align: justify;
     border-radius: .5rem;
-    box-shadow: 5px 5px 8px var(--bg-color-1);
+    box-shadow: 5px 5px 8px var(--accent-2);
 }
 
 .portfolio-item img {
@@ -102,7 +108,7 @@ nav a:hover {
     display: block;
     border-style: inset;
     border-width: .3rem;
-    /* border-color: rgb(221, 223, 224); */
+    border-color: var(--font);
     border-radius: .5rem;
 }
 
@@ -115,12 +121,12 @@ nav a:hover {
 }
 
 .about-section {
-    background-color:var(--font);
+    background-color:var(--bg-color-2);
 
 }
 
 .portfolio-section {
-    background-color: var(--accent-1);
+    background-color: var(--bg-color-2);
 }
 
 .contact-section {
@@ -128,8 +134,8 @@ nav a:hover {
 }
 
 footer {
-    background-color: var(--bg-color-2);
-    color: var(--font);
+    /* background-color: var(--bg-color-1); */
+    color: var(--dark);
     padding: 1rem;
     text-align: right;
 }
@@ -145,7 +151,7 @@ footer p {
     color:var(--accent-2);
 }
 
-.accent-2 {
-    color:var(--bg-color-2);
-}
+/* .accent-2 {
+    color:var(--);
+} */
 
