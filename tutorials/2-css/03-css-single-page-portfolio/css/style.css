@@ -1,13 +1,12 @@
 /* ````````````````````````Color Palette```````````````````````` */
-/*
-background color 1: #DDF3E9
-background color 2: #B0E4C4
-font: #3B2A12
-accent 1: #F3F1EB
-accent 2: #C2F2D4
-dark: #150F06
-
-*/
+:root {
+    --bg-color-1: #DDF3E9;
+    --bg-color-2: #B0E4C4;
+    --font: #3B2A12;
+    --accent-1: #F3F1EB;
+    --accent-2: #C2F2D4;
+    --dark: #150F06;
+}
 
 /* ````````````````````````CSS Resets```````````````````````` */
 
@@ -25,23 +24,23 @@ html {
 
 /* ````````````````````````General CSS```````````````````````` */
 body {
-    background-color: #DDF3E9;
+    background-color: var(--bg-color-1);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     line-height: 1.5rem;
-    color: #F3F1Eb;
+    color: var(--accent-1);
 }
 
 header {
     padding: 6rem;
     margin-bottom: 3rem;
-    background-color: #DDF3E9;
+    background-color: var(--bg-color-1);
     /* background: linear-gradient(90deg, #afd5ba 0%, #ffffff 100%); */
     /* background-image: url("../images/banner.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
-    color: #3B2A12;
-    border-bottom: #3B2A12 .5rem solid;
+    color: var(--font);
+    border-bottom: var(--font) .5rem solid;
     text-align: center;
 }
 
@@ -56,12 +55,12 @@ nav {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: #F3F1EB;
+    background-color: var(--accent-1);
 }
 
 nav a {
     text-decoration: none;
-    color: #3B2A12;
+    color: var(--font);
     display: inline-block;
     margin: 0rem 2rem;
 }
@@ -85,16 +84,16 @@ nav a:hover {
 }
 
 .portfolio-content h2 {
-    color: #3B2A12;
+    color: var(--font);
 }
 
 .portfolio-item {
     margin-bottom: 5rem;
-    background-color: #3B2A12;
+    background-color: var(--font);
     padding: 3rem;
     text-align: justify;
     border-radius: .5rem;
-    box-shadow: 5px 5px 8px #DDF3E9;
+    box-shadow: 5px 5px 8px var(--bg-color-1);
 }
 
 .portfolio-item img {
@@ -116,21 +115,21 @@ nav a:hover {
 }
 
 .about-section {
-    background-color:#3B2A12;
+    background-color:var(--font);
 
 }
 
 .portfolio-section {
-    background-color: #F3F1EB;
+    background-color: var(--accent-1);
 }
 
 .contact-section {
-    background-color: #3B2A12
+    background-color: var(--font);
 }
 
 footer {
-    background-color: #B0E4C4;
-    color: #3B2A12;
+    background-color: var(--bg-color-2);
+    color: var(--font);
     padding: 1rem;
     text-align: right;
 }
@@ -143,10 +142,10 @@ footer p {
 /* ````````````````````````Style Classes```````````````````````` */
 
 .accent-1 {
-    color:#C2F2D4;
+    color:var(--accent-2);
 }
 
 .accent-2 {
-    color:#B0E4C4;
+    color:var(--bg-color-2);
 }
 
