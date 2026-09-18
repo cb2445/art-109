@@ -28,11 +28,25 @@
         -16px = 1rem
     -images are default inline elements unlike e.x. divs
         -To get imgs to center properly, add [display: block;]
-    -In browsers like Chrom you can view the current CSS applied to the page by opening the window below the elements menu
+    -In browsers like Chrome you can view the current CSS applied to the page by opening the window below the elements menu
         -Allows dynamic changes as a preview
     -Classes can be used to change color specifically, and be applied to elements as an additional class
         -Add multiple classes to an element in html by separating the classes with a space (e.x. <section class="about-conrent accent-1")
         -These color classes are cosndiered global variables, and add ease to changing a single color in a palette that is used all at once
+    -H2 text content will display as a block element
+        -To get decorative characteristics to display properly, change it to display: inline-block, which combines elements respecting margins
+        -To retain spaces around text when altered with decoratve elements, use "&nbsp"
+    -Use "transition: all xs typeofease" to enable transitions for all characteristics
+    -Use html {scroll-behaviour: smooth;} to make jumps to sections smooth based animation
+    -To use linked fonts, link it as an href in the head in HTML, then reference it in CSS
+        -HTML: (e.x. <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Molle:ital@1&display=swap" rel="stylesheet">)
+        -CSS: (e.x. font-family: "Molle", cursive;)
+    -Use media queries to adjust for different device sizes
+        -Cascade is applied, so make sue the order is correct
+            -(e.x. max-width: 950px -> 750px) aka based on specificity 
+        -Media queries callout the conditions (e.x. max-width), then class/ID (e.x. header), then element (e.x. padding)
+            -Transitions can affect the animation during resizing 
+)
 - HTML
     -Use #'s to specify classes, which can be used for the nav bar
         -(e.x. <section class="about-section" id="about-section">)
@@ -46,6 +60,6 @@
     - hold opt : multi cursor 
     - shift+opt+down : duplicate down
     - cmd+d : highlights next word that is the same as highlighted and adds multi-cursor
-    - Copyright Symbol (HTML): &#169;, &copy;
+    - Copyright Symbol (HTML): &#169; / &copy;
 
  -->
