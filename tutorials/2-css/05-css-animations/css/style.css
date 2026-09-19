@@ -96,11 +96,15 @@ main {
     100% {scale: .7; color: #4B9D8F;}
 }
 
+.fyi {
+    text-align: center;
+}
+
 .inquiry {
     text-align: center;
     color: #2C1E0B;
     outline: 5px double #2C1E0B;
-    margin: 0px 200px;
+    margin: 30px 200px;
     transition: all 1s;
 }
 
