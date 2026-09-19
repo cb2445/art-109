@@ -23,6 +23,9 @@
     -CSS by default has its own quirks, which can be removed with resets
         -Resets: margins, padding, font size
     -Order of spacing: padding, border, margin
+        -Padding: The spacing inside of the element
+        -Margin: The spacing outside of the element
+            -4 values go clockwise, 2 values go top/bottom & left/right, 1 value would adjust to all, auto will center accordingly
     -Specifying in CSS which element (e.x. header h1, .portfolio-section img) will change that respective element, disregarding other similar elements on the page
     -px should be avoided as rem is ore accessible
         -16px = 1rem
@@ -36,7 +39,6 @@
     -H2 text content will display as a block element
         -To get decorative characteristics to display properly, change it to display: inline-block, which combines elements respecting margins
         -To retain spaces around text when altered with decoratve elements, use "&nbsp"
-    -Use "transition: all xs typeofease" to enable transitions for all characteristics
     -Use html {scroll-behaviour: smooth;} to make jumps to sections smooth based animation
     -To use linked fonts, link it as an href in the head in HTML, then reference it in CSS
         -HTML: (e.x. <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Molle:ital@1&display=swap" rel="stylesheet">)
@@ -46,7 +48,20 @@
             -(e.x. max-width: 950px -> 750px) aka based on specificity 
         -Media queries callout the conditions (e.x. max-width), then class/ID (e.x. header), then element (e.x. padding)
             -Transitions can affect the animation during resizing 
-)
+    -Anchor tags are in-line elements, unlike divs
+        -Add "display:xyz" & "width: zpx" to center text boxes
+        -Another way is to put the anchor tag into a div with a class, then text-align
+            -Transforming will not work unless display is set to "inline-block"
+    -Hover characteristics can be applied with "".elementname:hover{}"
+    -Transitions (occur upon an event)
+        -Use "transition: all xs typeofease" to enable transitions for all characteristics
+        -Apply the transition to specific elements by separating with commas and time (s)
+    -Animations (occur upon load)
+        -Use "@keyframes anim-name { from {background-color: xyz;} to {background-color: zyx;}}" below target class
+            -Define how long or often the naimation plays with a value or "infinite", then "alternate" to transition the animation back and forth
+            -Use percentages instead of "from" and "to" to add steps
+
+
 - HTML
     -Use #'s to specify classes, which can be used for the nav bar
         -(e.x. <section class="about-section" id="about-section">)
@@ -61,5 +76,6 @@
     - shift+opt+down : duplicate down
     - cmd+d : highlights next word that is the same as highlighted and adds multi-cursor
     - Copyright Symbol (HTML): &#169; / &copy;
+    - vw = viewport width
 
  -->
