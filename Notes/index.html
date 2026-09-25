@@ -60,6 +60,39 @@
         -Use "@keyframes anim-name { from {background-color: xyz;} to {background-color: zyx;}}" below target class
             -Define how long or often the naimation plays with a value or "infinite", then "alternate" to transition the animation back and forth
             -Use percentages instead of "from" and "to" to add steps
+    -Box sizing will control flex box elements to include any padding
+    -Flex direction can be changed and used in media queries to ahve items stack differently based on screen
+        -Gap is better than margin in flex boxes
+        -Horizontal align: "justify-content"
+        -Vertical: "align-items"
+
+
+
+/*
+CSS RESETS
+*/
+
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Remove default spacing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Respect user font settings */
+html {
+  font-size: 100%;
+}
+
 
 
 - HTML
@@ -77,5 +110,6 @@
     - cmd+d : highlights next word that is the same as highlighted and adds multi-cursor
     - Copyright Symbol (HTML): &#169; / &copy;
     - vw = viewport width
+    - cmd+cntrl+d : selects next same content of current selected
 
  -->
