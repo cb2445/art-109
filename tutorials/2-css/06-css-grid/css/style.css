@@ -151,10 +151,6 @@ main {
 
 }
 
-.contact-content {
-    align-items: center;
-}
-
 .portfolio-item {
     padding: 1rem;
     background-color: var(--font);
