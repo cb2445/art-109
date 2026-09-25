@@ -111,7 +111,9 @@ nav a:hover {
         display: flex;
         flex-direction: column;
         background-color: var(--bg-color-2);
+        border: .3rem solid var(--accent-1) ;
         padding: 1rem;
+        border-radius: .2rem;
     }
 
     .nav-menu a {
