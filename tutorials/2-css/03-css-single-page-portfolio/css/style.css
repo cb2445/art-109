@@ -154,7 +154,7 @@ main {
 }
 
 .contact-content h2 {
-    color:var(--font);
+    color: var(--font);
     outline: .2rem solid var(--accent-2);
 }
 
