@@ -67,7 +67,7 @@ body{
 
 header {
     padding: 5rem 2rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-bottom: 10rem;
     background-color: var(--bg-color-1);
     color: var(--font);
@@ -103,13 +103,18 @@ nav a:hover {
 }
 
 .navbar {
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
-    text-align: center;
-    padding: 1rem;
+    align-items: end;
+    /* margin: 0rem 35rem; */
+    /* top: 2rem;
+    right: 2rem;
+    position: fixed; */
+    margin-bottom: 5rem;
+    padding: .5rem 1rem;
     outline: .3rem double var(--font);
     border-radius: 1rem;
+    background-color: var(--bg-color-1);
 }
 
 .hamburger {
@@ -161,6 +166,14 @@ nav a:hover {
     header {
         padding: 3rem 2rem;
     }
+}
+
+.artist-statement {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0rem 10rem;
+    margin-bottom: 5rem;
 }
 
 main {
@@ -310,11 +323,11 @@ footer img {
 .button-mode {
     /* display: flex;
     justify-content: end; */
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
     /* float: right; */
-    position: fixed;
-    bottom: 1rem;
-    right: 4rem;
+    /* position: fixed; */
+    /* bottom: 1rem;
+    right: 4rem; */
     background-color: var(--bg-color-2);
     color: var(--font);
     border-radius: .2rem;
