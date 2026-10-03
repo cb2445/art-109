@@ -1,19 +1,4 @@
 /* ````````````````````````Color Palette```````````````````````` */
-/* :root {
-    --bg-color-1: #F8F7F5;
-    --bg-color-2: #FFFEFC;
-    --font: #3B2A12;
-    --accent-1: #4D7A5D;
-    --accent-2: #4B9D8F;
-}
-
-body.dark {
-    --bg-color-1: #3B2A12;
-    --bg-color-2: #FFFEFC;
-    --font: #F8F7F5;
-    --accent-1: #4D7A5D;
-    --accent-2: #4B9D8F;
-} */
 
 :root {
     --bg-color-1: #F8F7F5;
@@ -82,9 +67,11 @@ body{
 
 header {
     padding: 5rem 2rem;
-    margin-bottom: 7rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
     background-color: var(--bg-color-1);
     color: var(--font);
+    border-top: var(--font) .5rem solid;
     border-bottom: var(--font) .5rem solid;
 
 }
@@ -105,10 +92,21 @@ nav a:hover {
     color: var(--accent-2);
 }
 
-.navbar {
+.nav-brand {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 5rem;
+    /* padding: 1rem;
+    outline: .3rem double var(--font);
+    border-radius: 1rem; */
+}
+
+.navbar {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
     padding: 1rem;
     outline: .3rem double var(--font);
     border-radius: 1rem;
@@ -157,7 +155,7 @@ nav a:hover {
     }
 
     .nav-menu a {
-        color: var(--bg-color-2)
+        color: var(--font);
     }
      
     header {
@@ -292,11 +290,9 @@ footer img {
 }
 
 /* ````````````````````````Xtra Styling```````````````````````` */
-
-/* .accent-h {
-    font-size: 1.6rem;
-    color:var(--accent-2);
-    text-shadow: none;
+/* 
+.header-style {
+    background-color: var(--accent-1);
 } */
 
 .accent-1 {
@@ -327,6 +323,13 @@ footer img {
 }
 
 /* ````````````````````````Flex Styling```````````````````````` */
+
+/* .flex-landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} */
 
 .flex-container {
     display: flex;
