@@ -1,0 +1,387 @@
+/* ````````````````````````Color Palette```````````````````````` */
+
+:root {
+    --bg-color-1: #F8F9FF;
+    --bg-color-2: #E0E3F0;
+    --font: #2B2C2B;
+    --accent-1: #BCD6BE; 
+    --accent-2: #AABCE4;
+
+    --alt-accent1: #BCD6BE;
+    --alt-accent2: #d8dbe9;
+
+    --bg-1: url("../images/PortfolioBG1.jpg");
+    --bg-2: url("../images/PortfolioIntro1.jpg");
+}
+
+body.dark {
+    --bg-color-1: #1E1E20;
+    --bg-color-2: #0F0F11;
+    --font: #E7E7EE;
+    --accent-1: #BCD6BE; 
+    --accent-2: #AABCE4;
+
+    --alt-accent1: #91bc95;
+    --alt-accent2: #0f0f17;
+
+    --bg-1: url("../images/PortfolioBG2.jpg");
+    --bg-2: url("../images/PortfolioIntro2.jpg");
+}
+
+
+/* ````````````````````````CSS Resets```````````````````````` */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ````````````````````````Accessibility Resets```````````````````````` */
+html {
+    font-size: 100%;
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+}
+
+/* ````````````````````````General CSS```````````````````````` */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+
+    background-color: var(--bg-color-1);
+    color: var(--font);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+header {
+    padding: 3rem 4rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    background-color: var(--bg-color-1);
+    background-image: var(--bg-1);
+    background-size: cover;
+    color: var(--font);
+    border-top: var(--bg-color-2) .5rem solid;
+    border-bottom: var(--bg-color-2) .5rem solid;
+
+}
+
+header h1 {
+    font-family: "WindSong", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5rem;
+    color: var(--font);
+}
+
+.landing-memo {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 40rem;
+    height: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--font);
+    /* margin: 0 .5rem; */
+    /* transition: all .5s ease-in; */
+}
+
+nav a:hover {
+    color: var(--accent-2);
+}
+
+.nav-brand {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 41rem;
+    padding: .5rem 1rem;
+    border-top: var(--accent-2) .5rem double;
+    background-color: var(--bg-color-1);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--font);
+    font-size: 2rem;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-button-mode {
+    background-color: var(--bg-color-2);
+    color: var(--font);
+    border-radius: .2rem;
+    padding: .2rem;
+
+}
+
+@media (max-width: 740px){
+
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+        align-self: flex-end;
+    }
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-color-2);
+        border: .2rem solid var(--font) ;
+        padding: 1rem;
+        border-radius: .2rem;
+    }
+
+    .nav-menu a {
+        color: var(--font);
+    }
+     
+    header {
+        padding: 3rem 2rem;
+    }
+}
+
+.artist-statement {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40rem;
+    flex: 1 0 16rem;
+    text-align: left;
+    margin-bottom: 5rem;
+}
+
+main {
+    margin: 0;
+
+}
+
+@media (max-width: 1020px) {
+    main {
+        margin: 2rem;
+    }
+}
+
+@media (max-width: 840px) {
+    main {
+        margin: 1rem;
+    }
+}
+
+.portfolio-content, .contact-content {
+    max-width: 80rem;
+    margin: 0 auto 7rem auto;
+
+}
+
+.about-content h2, .portfolio-content h2, .contact-content h2 {
+    margin: 2rem 0;
+    background-color: var(--bg-color-1);
+    outline: .1rem solid var(--font);
+    border-radius: 2rem;
+
+}
+
+.about-content {
+    max-width: 40rem;
+    margin: 3rem 7rem 3rem auto;
+    background-color: var(--bg-color-1);
+}
+
+.contact-content {
+    text-align: center;
+    margin: 0 auto 2rem auto;
+}
+
+.contact-content h2 {
+    color: var(--font);
+    outline: .2rem solid var(--bg-color-2);
+}
+
+.portfolio-item {
+    padding: 1rem;
+    background-color: var(--bg-color-2);
+    color: var(--font);
+    border-radius: .3rem;
+    box-shadow: 3px 3px 5px var(--alt-accent2);
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    margin-top: .5rem auto;
+}
+
+.portfolio-item h3 {
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+
+.portfolio-item img {
+    border-radius: .2rem;
+}
+
+.about-section {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-image: var(--bg-2);
+    background-size: cover;
+    
+}
+
+.contact-section {
+    background-color: var(--alt-accent1);
+    color: var(--font);
+    padding: 1rem;
+}
+
+
+footer {
+    padding: 1rem 2rem;
+    color: var(--accent-2)
+}
+
+footer img {
+    display: inline;
+    max-width: 2rem;
+    margin: 0 .5rem;
+}
+
+@media (max-width: 700px) {
+    
+    footer p {
+        font-size: 1rem;
+    }
+
+    footer img {
+        max-width: 1.5rem;
+        margin: 0 .3rem;
+
+    }
+
+}
+
+@media (max-width: 450px) {
+    
+    footer p {
+        font-size: 1rem;
+    }
+
+    footer img {
+        max-width: 1rem;
+        margin: 0 .2rem;
+
+    }
+
+}
+
+/* ````````````````````````Xtra Styling```````````````````````` */
+
+.accent-1 {
+    color: var(--accent-2);
+    /* text-shadow: var(--alt2) 1px 1px 0; */
+
+}
+
+@media (max-width: 380px) {
+    .accent-1 {
+        font-size: 1.5rem;
+    }
+}
+
+.accent-2 {
+    color: var(--accent-1);
+    /* text-shadow: var(--alt2) 1px 1px 0; */
+
+}
+
+@media (max-width: 380px) {
+    .accent-1 {
+        font-size: 1.5rem;
+    }
+}
+
+.accent-3 {
+    color: var(--accent-1);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+/* ````````````````````````Flex Styling```````````````````````` */
+
+.flex-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 1.5rem;
+    outline: .2rem solid var(--accent-2);
+    border-radius: 1rem;
+
+}
+
+.flex-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+
+}
+
+.flex-item-grid {
+    flex: 1 0 16rem;
+
+}
+
+.flex-container-contact {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
