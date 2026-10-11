@@ -10,8 +10,12 @@
     --alt-accent1: #BCD6BE;
     --alt-accent2: #d8dbe9;
 
+    --bg-color-alt: #F8F9FF99;
+
     --bg-1: url("../images/PortfolioBG1.jpg");
     --bg-2: url("../images/PortfolioIntro1.jpg");
+
+    /* --bg-3: url("../images/gonyanipfplight.jpg"); */
 }
 
 body.dark {
@@ -24,9 +28,15 @@ body.dark {
     --alt-accent1: #91bc95;
     --alt-accent2: #0f0f17;
 
+    --bg-color-alt: #0F0F1199;
+
     --bg-1: url("../images/PortfolioBG2.jpg");
     --bg-2: url("../images/PortfolioIntro2.jpg");
+
+    /* --bg-3: url("../images/gonyanipfpdark.jpg"); */
 }
+
+/*NOTE: alt accents are for readjusting colors based on display mode (light/dark)*/
 
 
 /* ````````````````````````CSS Resets```````````````````````` */
@@ -210,7 +220,7 @@ main {
 }
 
 .portfolio-content, .contact-content {
-    max-width: 80rem;
+    max-width: 85rem;
     margin: 0 auto 7rem auto;
 
 }
@@ -225,8 +235,12 @@ main {
 
 .about-content {
     max-width: 40rem;
-    margin: 3rem 7rem 3rem auto;
+    margin: 1rem 7rem;
     background-color: var(--bg-color-1);
+}
+
+.about-img {
+    object-fit: none;
 }
 
 .contact-content {
@@ -263,7 +277,7 @@ main {
 
 .about-section {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     background-image: var(--bg-2);
     background-size: cover;
@@ -278,8 +292,9 @@ main {
 
 
 footer {
-    padding: 1rem 2rem;
-    color: var(--accent-2)
+    padding: 1rem 1rem;
+    color: var(--accent-2);
+    font-size: 1rem;
 }
 
 footer img {
@@ -373,7 +388,7 @@ footer img {
 }
 
 .flex-item-grid {
-    flex: 1 0 16rem;
+    flex: 1 0 25rem;
 
 }
 
@@ -383,5 +398,28 @@ footer img {
     justify-content: center;
     align-items: stretch;
 }
+
+.split-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.split-1 {
+    width: auto;
+    height: auto;
+}
+
+.split-2 {
+    width: 50rem;
+    height: auto;
+}
+
+
+
 
 
