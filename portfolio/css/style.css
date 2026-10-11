@@ -6,6 +6,7 @@
     --font: #2B2C2B;
     --accent-1: #BCD6BE; 
     --accent-2: #AABCE4;
+    --bg-overlay: #F8F9FF55;
 
     --alt-accent1: #BCD6BE;
     --alt-accent2: #d8dbe9;
@@ -24,6 +25,7 @@ body.dark {
     --font: #E7E7EE;
     --accent-1: #BCD6BE; 
     --accent-2: #AABCE4;
+    --bg-overlay: #1E1E2055;
 
     --alt-accent1: #91bc95;
     --alt-accent2: #0f0f17;
@@ -88,13 +90,13 @@ header {
     border-bottom: var(--bg-color-2) .5rem solid;
 
 }
-/* 
+
 @media (max-width: 1280px) {
     header {
         background-size: contain;
         background-repeat: no-repeat;
     }
-} */
+}
 
 header h1 {
     font-family: "WindSong", cursive;
@@ -226,6 +228,7 @@ nav a:hover {
     padding-bottom: 2rem;
     margin-bottom: 5rem;
     border-bottom: var(--accent-2) .5rem double;
+    background-color: var(--bg-overlay);
 }
 
 @media (max-width: 1360px) {
@@ -347,6 +350,13 @@ main {
     background-image: var(--bg-2);
     background-size: cover;
     
+}
+
+@media (max-width: 1280px) {
+    .about-section {
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 .portfolio-section {
