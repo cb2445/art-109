@@ -1,42 +1,32 @@
 /* ````````````````````````Color Palette```````````````````````` */
 
 :root {
-    --bg-color-1: #F8F9FF;
-    --bg-color-2: #E0E3F0;
-    --font: #2B2C2B;
-    --accent-1: #BCD6BE; 
-    --accent-2: #AABCE4;
+    --bg-color-1: #F8F7F5;
+    --bg-color-2: #FFFEFC;
+    --font: #3B2A12;
+    --accent-1: #4D7A5D;
+    --accent-2: #4B9D8F;
 
-    --alt-accent1: #BCD6BE;
-    --alt-accent2: #d8dbe9;
+    --alt: #3B2A12;
 
-    --bg-color-alt: #F8F9FF99;
-
-    --bg-1: url("../images/PortfolioBG1.jpg");
-    --bg-2: url("../images/PortfolioIntro1.jpg");
-
-    /* --bg-3: url("../images/gonyanipfplight.jpg"); */
+    --alt2: #FFFEFC99;
+    --alt3: #3B2A12;
 }
 
 body.dark {
-    --bg-color-1: #1E1E20;
-    --bg-color-2: #0F0F11;
-    --font: #E7E7EE;
-    --accent-1: #BCD6BE; 
-    --accent-2: #AABCE4;
+    --bg-color-1: #291D0B;
+    --bg-color-2: #3B2A12;
+    --font: #F8F7F5;
+    --accent-1: #4D7A5D;
+    --accent-2: #4B9D8F;
 
-    --alt-accent1: #91bc95;
-    --alt-accent2: #0f0f17;
+    --alt: #EAE0D2;
 
-    --bg-color-alt: #0F0F1199;
-
-    --bg-1: url("../images/PortfolioBG2.jpg");
-    --bg-2: url("../images/PortfolioIntro2.jpg");
-
-    /* --bg-3: url("../images/gonyanipfpdark.jpg"); */
+    --alt2: #3B2A1299;
+    --alt3: #F8F7F5;
 }
 
-/*NOTE: alt accents are for readjusting colors based on display mode (light/dark)*/
+/* alt colors are designated to specific elements that need tweaking when shifting modes! */
 
 
 /* ````````````````````````CSS Resets```````````````````````` */
@@ -70,39 +60,25 @@ body{
     color: var(--font);
     font-size: 1.1rem;
     line-height: 1.5;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+    font-family: "Lora", serif;
+    /* text-align: justify; */
 
 }
 
 header {
-    padding: 3rem 4rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    padding: 5rem 2rem;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
     background-color: var(--bg-color-1);
-    background-image: var(--bg-1);
-    background-size: cover;
     color: var(--font);
-    border-top: var(--bg-color-2) .5rem solid;
-    border-bottom: var(--bg-color-2) .5rem solid;
+    border-top: var(--font) .5rem solid;
+    border-bottom: var(--font) .5rem solid;
 
 }
 
 header h1 {
-    font-family: "WindSong", cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 5rem;
-    color: var(--font);
-}
-
-.landing-memo {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 40rem;
-    height: auto;
+    font-family: "Molle", cursive;
+    text-shadow: 4px 3px 0px var(--accent-2), 3px 2px 2px;
 }
 
 nav a {
@@ -118,18 +94,26 @@ nav a:hover {
 
 .nav-brand {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+    /* padding: 1rem;
+    outline: .3rem double var(--font);
+    border-radius: 1rem; */
 }
 
 .navbar {
     display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 41rem;
+    justify-content: center;
+    align-items: end;
+    /* margin: 0rem 35rem; */
+    /* top: 2rem;
+    right: 2rem;
+    position: fixed; */
+    margin-bottom: 5rem;
     padding: .5rem 1rem;
-    border-top: var(--accent-2) .5rem double;
+    outline: .3rem double var(--font);
+    border-radius: 1rem;
     background-color: var(--bg-color-1);
 }
 
@@ -145,14 +129,6 @@ nav a:hover {
     list-style: none;
     display: flex;
     gap: 1rem;
-}
-
-.nav-button-mode {
-    background-color: var(--bg-color-2);
-    color: var(--font);
-    border-radius: .2rem;
-    padding: .2rem;
-
 }
 
 @media (max-width: 740px){
@@ -194,11 +170,9 @@ nav a:hover {
 
 .artist-statement {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 40rem;
-    flex: 1 0 16rem;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
+    padding: 0rem 10rem;
     margin-bottom: 5rem;
 }
 
@@ -219,8 +193,8 @@ main {
     }
 }
 
-.portfolio-content, .contact-content {
-    max-width: 85rem;
+.about-content, .portfolio-content, .contact-content {
+    max-width: 60rem;
     margin: 0 auto 7rem auto;
 
 }
@@ -234,13 +208,7 @@ main {
 }
 
 .about-content {
-    max-width: 40rem;
-    margin: 1rem 7rem;
-    background-color: var(--bg-color-1);
-}
-
-.about-img {
-    object-fit: none;
+    margin: 0rem auto 0rem auto;
 }
 
 .contact-content {
@@ -250,7 +218,7 @@ main {
 
 .contact-content h2 {
     color: var(--font);
-    outline: .2rem solid var(--bg-color-2);
+    outline: .2rem solid var(--accent-2);
 }
 
 .portfolio-item {
@@ -258,12 +226,12 @@ main {
     background-color: var(--bg-color-2);
     color: var(--font);
     border-radius: .3rem;
-    box-shadow: 3px 3px 5px var(--alt-accent2);
+    /* box-shadow: 5px 5px 8px var(--alt2); */
 }
 
 .portfolio-item p {
     font-size: 1rem;
-    margin-top: .5rem auto;
+    margin: .5rem;
 }
 
 .portfolio-item h3 {
@@ -273,28 +241,31 @@ main {
 
 .portfolio-item img {
     border-radius: .2rem;
+    /* border-style: inset;
+    border-width: .3rem;
+    border-color: var(--bg-color-2);
+    border-radius: .5rem; */
 }
 
-.about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: var(--bg-2);
-    background-size: cover;
-    
-}
+/* .about-section {
+    background-color: var(--bg-color-2);
+} */
+
+/* 
+.portfolio-section {
+    background-color: var(--bg-color-2);
+} */
 
 .contact-section {
-    background-color: var(--alt-accent1);
-    color: var(--font);
+    background-color: var(--alt);
+    color: var(--bg-color-1);
     padding: 1rem;
 }
 
 
 footer {
-    padding: 1rem 1rem;
-    color: var(--accent-2);
-    font-size: 1rem;
+    padding: 1rem 2rem;
+    color: var(--font)
 }
 
 footer img {
@@ -332,10 +303,14 @@ footer img {
 }
 
 /* ````````````````````````Xtra Styling```````````````````````` */
+/* 
+.header-style {
+    background-color: var(--accent-1);
+} */
 
 .accent-1 {
     color: var(--accent-2);
-    /* text-shadow: var(--alt2) 1px 1px 0; */
+    /* text-shadow: var(--font) 1px 1px 0; */
 
 }
 
@@ -345,35 +320,37 @@ footer img {
     }
 }
 
-.accent-2 {
-    color: var(--accent-1);
-    /* text-shadow: var(--alt2) 1px 1px 0; */
+.button-mode {
+    /* display: flex;
+    justify-content: end; */
+    /* margin: 2rem auto; */
+    /* float: right; */
+    /* position: fixed; */
+    /* bottom: 1rem;
+    right: 4rem; */
+    background-color: var(--bg-color-2);
+    color: var(--font);
+    border-radius: .2rem;
+    padding: .2rem;
 
-}
-
-@media (max-width: 380px) {
-    .accent-1 {
-        font-size: 1.5rem;
-    }
-}
-
-.accent-3 {
-    color: var(--accent-1);
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1rem;
 }
 
 /* ````````````````````````Flex Styling```````````````````````` */
+
+/* .flex-landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} */
 
 .flex-container {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    margin: 2rem 1rem 2rem 1rem;
+    margin: 2rem 1rem 7rem 1rem;
     padding: 1.5rem;
-    outline: .2rem solid var(--accent-2);
+    outline: .3rem double var(--font);
     border-radius: 1rem;
 
 }
@@ -388,7 +365,7 @@ footer img {
 }
 
 .flex-item-grid {
-    flex: 1 0 25rem;
+    flex: 1 0 16rem;
 
 }
 
@@ -398,28 +375,5 @@ footer img {
     justify-content: center;
     align-items: stretch;
 }
-
-.split-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: auto;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.split-1 {
-    width: auto;
-    height: auto;
-}
-
-.split-2 {
-    width: 50rem;
-    height: auto;
-}
-
-
-
 
 

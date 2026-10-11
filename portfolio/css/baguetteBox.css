@@ -55,9 +55,8 @@
   text-align: center;
   line-height: 1.8;
   white-space: normal;
-  color: var(--alt3);
-  /* background-color: var(--bg-color-2); */
-  background-color: var(--alt2);
+  color: var(--font);
+  background-color: var(--bg-color-alt);
   font-family: sans-serif;
 }
 #baguetteBox-overlay .full-image:before {
