@@ -75,6 +75,8 @@ body{
     font-weight: 300;
     font-style: normal;
 
+    cursor: none;
+
 }
 
 header {
@@ -274,16 +276,14 @@ main {
 
 }
 
-/* @media (max-width: 1420px) {
-    main {
-        margin: 2.5rem;
-    }
+.cursor-chaser {
+    width: 2em;
+    height: 2em;
+
+    position: fixed;
+    pointer-events: none;
+
 }
-@media (max-width: 1020px) {
-    main {
-        margin: 2rem;
-    }
-} */
 
 .portfolio-content, .contact-content {
     max-width: 85rem;
@@ -463,10 +463,10 @@ footer img {
     }
 }
 
-#canvas {
+/* #canvas {
     z-index: 9999;
     pointer-events: none;
-}
+} */
 
 /* ````````````````````````Flex Styling```````````````````````` */
 
