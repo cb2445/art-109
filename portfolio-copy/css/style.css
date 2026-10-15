@@ -40,7 +40,6 @@ body.dark {
 
 /*NOTE: alt accents are for readjusting colors based on display mode (light/dark)*/
 
-
 /* ````````````````````````CSS Resets```````````````````````` */
 
 * {
@@ -465,8 +464,8 @@ footer img {
 }
 
 #canvas {
+    z-index: 9999;
     pointer-events: none;
-    z-index: 2;
 }
 
 /* ````````````````````````Flex Styling```````````````````````` */
