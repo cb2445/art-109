@@ -94,6 +94,8 @@ footer {
 .cursor-chaser {
     width: 2em;
     height: 2em;
+    pointer-events: none;
+    z-index: 999;
 
     position: fixed;
     pointer-events: none;
