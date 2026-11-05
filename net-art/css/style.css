@@ -43,12 +43,13 @@ body {
     font-family: "Nothing You Could Do", cursive;
     font-weight: 400;
     font-style: normal;
+    cursor: none;
 
 }
 
 header {
     padding: 3rem auto;
-    margin-top: 10rem;
+    margin-top: 3rem;
     background-color: var(--bg-color-1);
     color: var(--overlay);
     text-align: center;
@@ -84,6 +85,21 @@ main p {
 
 }
 
+footer {
+    margin: 2rem;
+    color: var(--font);
+    font-size: 1rem;
+}
+
+.cursor-chaser {
+    width: 2em;
+    height: 2em;
+
+    position: fixed;
+    pointer-events: none;
+
+}
+
 .enter {
 
     border-bottom: var(--accent-2) .5rem double;
@@ -101,14 +117,29 @@ main p {
     width: 100%;
     height: auto;
     flex-wrap: wrap;
+    background-color: var(--bg-color-2);
+    padding: 0rem;
     margin-bottom: 5rem;
 }
+
+@media (max-width: 500px) {
+    .split-flex1 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .split-flex1 {
+        font-size: 1.5rem;
+    }
+}
+
 .split-flex2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 100%;
+    width: auto;
     height: auto;
     flex-wrap: wrap;
 }
@@ -142,6 +173,7 @@ main p {
     height: auto;
     text-align: center;
 }
+
 .split-b {
     display: flex;
     justify-content: center;
@@ -150,6 +182,7 @@ main p {
     height: auto;
     text-align: center;
 }
+
 .split-c {
     display: flex;
     justify-content: center;
@@ -178,15 +211,42 @@ main p {
 
 }
 
+.bar-text {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-size: 3rem;
+}
+
 .plush {
     max-width: 60%;
+}
+
+.archive-profiles {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 980px) {
+    .archive-profiles {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .archive-profiles {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 590px) {
+    .archive-profiles {
+        font-size: 1rem;
+    }
 }
 
 .items-grid {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 
 }
 
@@ -197,23 +257,27 @@ main p {
     padding: 1rem;
 
 }
+
 .container-bag {
     position: relative;
     width: 20%;
     padding: 1rem;
 }
+
 .container-clip {
     position: relative;
     width: 15%;
     rotate: .2rad;
     padding: 1rem;
 }
+
 .container-perfume {
     position: relative;
     width: 20%;
     rotate: .1rad;
     padding: 1rem;
 }
+
 .container-lip {
     position: relative;
     width: 10%;
@@ -247,6 +311,7 @@ main p {
 .container-drink:active .overlay {
     opacity: 1;
 }
+
 .container-bag:active .items-image {
     opacity: .3;
 }
@@ -254,6 +319,7 @@ main p {
 .container-bag:active .overlay {
     opacity: 1;
 }
+
 .container-clip:active .items-image {
     opacity: .3;
 }
@@ -261,6 +327,7 @@ main p {
 .container-clip:active .overlay {
     opacity: 1;
 }
+
 .container-perfume:active .items-image {
     opacity: .3;
 }
@@ -268,6 +335,7 @@ main p {
 .container-perfume:active .overlay {
     opacity: 1;
 }
+
 .container-lip:active .items-image {
     opacity: .3;
 }
