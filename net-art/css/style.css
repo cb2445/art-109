@@ -216,7 +216,6 @@ footer {
     width: 100%;
     height: auto;
     flex-wrap: wrap;
-    /* margin: 0 5rem; */
     margin-bottom: 5rem;
 }
 
@@ -268,7 +267,7 @@ footer {
 
 .container-drink {
     position: relative;
-    width: 20%;
+    width: 10%;
     rotate: -.5rad;
     margin: 0rem 3rem;
 
@@ -282,21 +281,21 @@ footer {
 
 .container-clip {
     position: relative;
-    width: 30%;
+    width: 20%;
     rotate: .2rad;
     margin: 0rem 3rem;
 }
 
 .container-perfume {
     position: relative;
-    width: 30%;
+    width: 20%;
     rotate: .1rad;
     margin: 0rem 3rem;
 }
 
 .container-lip {
     position: relative;
-    width: 20%;
+    width: 10%;
     rotate: .1rad;
     margin: 0rem 3rem;
 }
