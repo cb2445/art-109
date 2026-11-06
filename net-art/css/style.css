@@ -91,6 +91,19 @@ footer {
     font-size: 1rem;
 }
 
+.opener {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+
+.mascot {
+    width: 10%;
+}
+
 .cursor-chaser {
     width: 2em;
     height: 2em;
@@ -254,7 +267,7 @@ footer {
 
 .container-drink {
     position: relative;
-    width: 10%;
+    width: 30%;
     rotate: -.5rad;
     padding: 1rem;
 
@@ -262,27 +275,27 @@ footer {
 
 .container-bag {
     position: relative;
-    width: 20%;
+    width: 30%;
     padding: 1rem;
 }
 
 .container-clip {
     position: relative;
-    width: 15%;
+    width: 30%;
     rotate: .2rad;
     padding: 1rem;
 }
 
 .container-perfume {
     position: relative;
-    width: 20%;
+    width: 30%;
     rotate: .1rad;
     padding: 1rem;
 }
 
 .container-lip {
     position: relative;
-    width: 10%;
+    width: 30%;
     rotate: .1rad;
     padding: 1rem;
 }
@@ -304,6 +317,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 999;
 }
 
 .container-drink:active .items-image {
