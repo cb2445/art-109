@@ -120,7 +120,7 @@ footer {
     border-bottom: var(--accent-2) .5rem double;
     text-decoration: none;
     color: var(--font);
-    font-size: 3rem;
+    font-size: 2rem;
 
 }
 
@@ -262,43 +262,61 @@ footer {
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
 
 }
 
 .container-drink {
     position: relative;
-    width: 30%;
+    width: 20%;
     rotate: -.5rad;
-    padding: 1rem;
+    margin: 0rem 3rem;
 
 }
 
 .container-bag {
     position: relative;
     width: 30%;
-    padding: 1rem;
+    margin: 0rem 3rem;
 }
 
 .container-clip {
     position: relative;
     width: 30%;
     rotate: .2rad;
-    padding: 1rem;
+    margin: 0rem 3rem;
 }
 
 .container-perfume {
     position: relative;
     width: 30%;
     rotate: .1rad;
-    padding: 1rem;
+    margin: 0rem 3rem;
 }
 
 .container-lip {
     position: relative;
-    width: 30%;
+    width: 20%;
     rotate: .1rad;
-    padding: 1rem;
+    margin: 0rem 3rem;
 }
+
+@media (max-width: 900px) {
+    .container-drink .container-lip {
+        width: 50%;
+        margin: 0 1rem;
+
+    }
+
+    .container-bag .container-clip .container-perfume {
+        width: 100%;
+        margin: 0 1rem;
+    }
+}
+@media (max-width: 780px) {
+    
+}
+
 
 .items-image {
     opacity: 1;
