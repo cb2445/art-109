@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tun3.mp3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div>
+            <p class="eyebrow">always care for yourself</p>
+            <h1>tun3.mp3</h1>
+          </div>
+        </div>
+
+        <nav class="topnav" aria-label="Main navigation">
+          <a href="#">Discover</a>
+          <a href="#">Library</a>
+          <a href="#">Radio</a>
+        </nav>
+
+        <div class="theme-switcher" aria-label="Theme switcher">
+          <span class="theme-switcher__label">Themes</span>
+          <div class="theme-options">
+            <button class="theme-option active" type="button" data-theme="classical-chocolate" aria-label="Classical Chocolate theme">
+              <span class="swatch" style="background:#3f2a23;"></span>
+              Classical Chocolate
+            </button>
+            <button class="theme-option" type="button" data-theme="summer-melon" aria-label="Summer Melon theme">
+              <span class="swatch" style="background:#c04336;"></span>
+              Summer Melon
+            </button>
+            <button class="theme-option" type="button" data-theme="retro-weather" aria-label="Retro Weather theme">
+              <span class="swatch" style="background:#f5d46b;"></span>
+              Retro Weather
+            </button>
+            <button class="theme-option" type="button" data-theme="fresh-water-grape" aria-label="Fresh Water Grape theme">
+              <span class="swatch" style="background:#2b388d;"></span>
+              Fresh Water Grape
+            </button>
+            <button class="theme-option" type="button" data-theme="grass-fields" aria-label="Grass Fields theme">
+              <span class="swatch" style="background:#b2b636;"></span>
+              Grass Fields
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="music-layout">
+        <section class="player-panel" aria-label="Currently playing">
+          <div class="art-panel">
+            <div class="album-cover">
+              <div class="cover-glow"></div>
+            </div>
+          </div>
+
+          <div class="track-panel">
+            <div class="meta-row">
+              <span class="chip chip-red">New Release</span>
+              <span class="chip chip-blue">Acnh-core</span>
+            </div>
+
+            <div class="title-block">
+              <p class="label">Now Playing</p>
+              <h2 id="track-title">Midnight Signal</h2>
+              <p id="track-artist" class="artist">Nova Harbor</p>
+            </div>
+
+            <div class="progress-wrap" aria-label="Playback progress">
+              <div class="time-row">
+                <span id="current-time">1:28</span>
+                <span id="total-time">3:44</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="controls" aria-label="Playback controls">
+              <button class="control-btn ghost" aria-label="Shuffle">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5h-2V6.41l-3.29 3.3-1.42-1.42L17.59 5H16V3zm-7.71 10.29L6.41 15H5v2h5v-2H7.41l2.29-2.29 1.42 1.42zM21 16v2h-2.59l-3.7-3.7 1.42-1.42L21 16zm-7.71-9.29L3 17v2h2l9.29-9.29-1.42-1.42z"/></svg>
+              </button>
+              <button class="control-btn" id="prev-btn" aria-label="Previous track">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2v14H6zm12 1.5v12L10.5 12 18 6.5z"/></svg>
+              </button>
+              <button class="control-btn primary" id="play-toggle" aria-label="Play or pause">
+                <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <button class="control-btn" id="next-btn" aria-label="Next track">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 19h2V5h-2zm-8 0V5l7.5 7L8 19z"/></svg>
+              </button>
+              <button class="control-btn ghost" aria-label="Repeat">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="queue-panel" aria-label="Up next">
+          <div class="section-head">
+            <p>Queue</p>
+            <span>12 tracks</span>
+          </div>
+
+          <ul class="queue-list" id="playlist">
+            <li class="queue-item active" data-title="Midnight Signal" data-artist="Nova Harbor" data-duration="3:44">
+              <div class="track-number">01</div>
+              <div class="track-copy">
+                <strong>Midnight Signal</strong>
+                <span>Nova Harbor</span>
+              </div>
+              <time>3:44</time>
+            </li>
+            <li class="queue-item" data-title="Crystal Dusk" data-artist="Velvet Circuit" data-duration="4:12">
+              <div class="track-number">02</div>
+              <div class="track-copy">
+                <strong>Crystal Dusk</strong>
+                <span>Velvet Circuit</span>
+              </div>
+              <time>4:12</time>
+            </li>
+            <li class="queue-item" data-title="Neon Tide" data-artist="Daybreak Lane" data-duration="2:58">
+              <div class="track-number">03</div>
+              <div class="track-copy">
+                <strong>Neon Tide</strong>
+                <span>Daybreak Lane</span>
+              </div>
+              <time>2:58</time>
+            </li>
+            <li class="queue-item" data-title="Red Horizon" data-artist="Aster Bloom" data-duration="3:20">
+              <div class="track-number">04</div>
+              <div class="track-copy">
+                <strong>Red Horizon</strong>
+                <span>Aster Bloom</span>
+              </div>
+              <time>3:20</time>
+            </li>
+            <li class="queue-item" data-title="Skyline Run" data-artist="North Star Club" data-duration="5:06">
+              <div class="track-number">05</div>
+              <div class="track-copy">
+                <strong>Skyline Run</strong>
+                <span>North Star Club</span>
+              </div>
+              <time>5:06</time>
+            </li>
+          </ul>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
