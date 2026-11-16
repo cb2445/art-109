@@ -5,11 +5,13 @@ const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const progressFill = document.getElementById('progress-fill');
 const progressBar = document.querySelector('.progress-bar');
+const progressEmoji = document.getElementById('progress-emoji');
 const currentTimeEl = document.getElementById('current-time');
 const totalTimeEl = document.getElementById('total-time');
 const trackTitle = document.getElementById('track-title');
 const trackArtist = document.getElementById('track-artist');
 const playlistItems = [...document.querySelectorAll('.queue-item')];
+const playerEmoji = document.getElementById('player-emoji');
 
 // Build the track list from the playlist items.
 const tracks = playlistItems.map((item) => ({
@@ -22,7 +24,7 @@ const tracks = playlistItems.map((item) => ({
 // Current playback state.
 let currentTrackIndex = 0;
 let isPlaying = false;
-let progress = 38;
+let progress = 0;
 let timer = null;
 
 // Convert total seconds into a MM:SS display.
@@ -45,7 +47,7 @@ function applyTrack(index) {
     item.classList.toggle('active', idx === currentTrackIndex);
   });
 
-  progress = 14;
+  progress = 0;
   updateProgress();
 }
 
@@ -57,6 +59,7 @@ function updateProgress() {
   const fillWidth = Math.min(Math.max((progress / totalSeconds) * 100, 2), 100);
 
   progressFill.style.width = `${fillWidth}%`;
+  progressEmoji.style.left = `${Math.min(fillWidth, 94)}%`;
   currentTimeEl.textContent = formatTime(Math.min(Math.floor(progress), totalSeconds));
 }
 
@@ -77,8 +80,14 @@ function togglePlayback() {
       const totalSeconds = minutes * 60 + seconds;
 
       if (progress >= totalSeconds) {
-        progress = 0;
+        clearInterval(timer);
+        timer = null;
         nextTrack();
+        if (!isPlaying) {
+          isPlaying = true;
+          playIcon.innerHTML = '<path d="M7 5h4v14H7zm6 0h4v14h-4z"/>';
+          playToggle.setAttribute('aria-label', 'Pause');
+        }
         return;
       }
 
@@ -203,12 +212,23 @@ const themeMap = {
   },
 };
 
+// Map of theme names to emojis.
+const themeEmojiMap = {
+  'classical-chocolate': '🍫',
+  'summer-melon': '🍉',
+  'retro-weather': '🚐',
+  'fresh-water-grape': '🍇',
+  'grass-fields': '☘️',
+};
+
 // Apply a selected theme by updating CSS custom properties.
 function applyTheme(themeName) {
   const theme = themeMap[themeName] || classicalChocolate;
   Object.entries(theme).forEach(([key, value]) => {
     root.style.setProperty(key, value);
   });
+
+  progressEmoji.textContent = themeEmojiMap[themeName] || '🍫';
 
   themeButtons.forEach((button) => {
     const isActive = button.dataset.theme === themeName;
@@ -231,3 +251,47 @@ themeButtons.forEach((button) => {
 
 // Start with the first track loaded.
 applyTrack(0);
+
+// Drag-to-skip logic for the progress bar.
+function setProgressFromPointer(clientX) {
+  const rect = progressBar.getBoundingClientRect();
+  const ratio = Math.min(Math.max((clientX - rect.left) / rect.width, 0), 1);
+  const activeDuration = tracks[currentTrackIndex].duration;
+  const [minutes, seconds] = activeDuration.split(':').map(Number);
+  const totalSeconds = minutes * 60 + seconds;
+
+  progress = ratio * totalSeconds;
+  updateProgress();
+}
+
+progressBar.addEventListener('pointerdown', (event) => {
+  setProgressFromPointer(event.clientX);
+  const drag = (moveEvent) => setProgressFromPointer(moveEvent.clientX);
+  const stop = () => {
+    window.removeEventListener('pointermove', drag);
+    window.removeEventListener('pointerup', stop);
+  };
+
+  window.addEventListener('pointermove', drag);
+  window.addEventListener('pointerup', stop);
+});
+
+// Volume control setup.
+const volumeSteps = [...document.querySelectorAll('.volume-step')];
+let volumeLevel = 72;
+
+function updateVolumeDisplay() {
+  volumeSteps.forEach((step) => {
+    const stepValue = Number(step.dataset.volume);
+    step.classList.toggle('active', stepValue <= volumeLevel);
+  });
+}
+
+volumeSteps.forEach((step) => {
+  step.addEventListener('click', () => {
+    volumeLevel = Number(step.dataset.volume);
+    updateVolumeDisplay();
+  });
+});
+
+updateVolumeDisplay();

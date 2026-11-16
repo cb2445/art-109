@@ -12,18 +12,20 @@
   <body>
     <div class="page-shell">
       <header class="topbar">
-        <div class="brand">
-          <div>
-            <p class="eyebrow">always care for yourself</p>
-            <h1>tun3.mp3</h1>
+        <div class="header-row">
+          <div class="brand">
+            <div>
+              <p class="eyebrow">always care for yourself</p>
+              <h1>tun3.mp3</h1>
+            </div>
           </div>
-        </div>
 
-        <nav class="topnav" aria-label="Main navigation">
-          <a href="#">Discover</a>
-          <a href="#">Library</a>
-          <a href="#">Radio</a>
-        </nav>
+          <nav class="topnav" aria-label="Main navigation">
+            <a href="#">Discover</a>
+            <a href="#">Library</a>
+            <a href="#">Radio</a>
+          </nav>
+        </div>
 
         <div class="theme-switcher" aria-label="Theme switcher">
           <span class="theme-switcher__label">Themes</span>
@@ -77,8 +79,9 @@
                 <span id="current-time">1:28</span>
                 <span id="total-time">3:44</span>
               </div>
-              <div class="progress-bar">
+              <div class="progress-bar" aria-label="Track progress">
                 <div class="progress-fill" id="progress-fill"></div>
+                <div class="progress-emoji" id="progress-emoji" aria-hidden="true">🍫</div>
               </div>
             </div>
 
@@ -95,9 +98,22 @@
               <button class="control-btn" id="next-btn" aria-label="Next track">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 19h2V5h-2zm-8 0V5l7.5 7L8 19z"/></svg>
               </button>
-              <button class="control-btn ghost" aria-label="Repeat">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg>
-              </button>
+            </div>
+
+            <div class="volume-control" aria-label="Volume control">
+              <span class="volume-label">Volume</span>
+              <div class="volume-bar" id="volume-bar" aria-label="Volume selector">
+                <button class="volume-step" type="button" data-volume="10" aria-label="Set volume to 10 percent"></button>
+                <button class="volume-step" type="button" data-volume="20" aria-label="Set volume to 20 percent"></button>
+                <button class="volume-step" type="button" data-volume="30" aria-label="Set volume to 30 percent"></button>
+                <button class="volume-step" type="button" data-volume="40" aria-label="Set volume to 40 percent"></button>
+                <button class="volume-step" type="button" data-volume="50" aria-label="Set volume to 50 percent"></button>
+                <button class="volume-step" type="button" data-volume="60" aria-label="Set volume to 60 percent"></button>
+                <button class="volume-step" type="button" data-volume="70" aria-label="Set volume to 70 percent"></button>
+                <button class="volume-step" type="button" data-volume="80" aria-label="Set volume to 80 percent"></button>
+                <button class="volume-step" type="button" data-volume="90" aria-label="Set volume to 90 percent"></button>
+                <button class="volume-step" type="button" data-volume="100" aria-label="Set volume to 100 percent"></button>
+              </div>
             </div>
           </div>
         </section>
